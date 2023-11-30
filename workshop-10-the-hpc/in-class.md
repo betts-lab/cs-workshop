@@ -13,13 +13,13 @@ For this week's workshop, we'll be doing the first step in any sequencing pipeli
 ## First, let's talk a little about what we learned...
 1. What is Conda? And why do we use it?
 2. What is Git? And why do we use it?
-3. How does Illumian sequencing by synthesis work? How did your BCL files come to existence?
+3. How does Illumina sequencing by synthesis work? How did your BCL files come to existence?
 
 ## Next, let's identify a sequencing set that you will be working on...
 1. Identify your project of interest (already sequenced). If you don't have one, let me know and I'll provide you one!
 
 ## Alright let's begin!
-1. Log in to the HPC - make sure you're logging into the address with consign and not mercury.
+1. Log in to the HPC - make sure you're logging into the address with `consign` and not `mercury`.
 2. Enter an interactive session.
 3. Check which directory you're in. If you're not in your home directory, `cd` in your home directory.
 4. Make a new directory called `pkg` and enter into it.
@@ -50,13 +50,13 @@ For this week's workshop, we'll be doing the first step in any sequencing pipeli
 2. For cellranger-arc, cellranger-atac, or cellranger mkfastq - you will need a simple samplesheet. Use your library indexing spreadsheet to construct a `simple samplesheet` as detailed in the 10X Genomics documentation. Either upload your simple samplesheet to your new directory using `scp` or use `Vim` to construct it in the HPC.
 3. Using the documentation for your particular flavor of cellranger, write a sample bash script to execute your mkfastq script. Do NOT actually run your bash script yet.
     - I will provide you the path for the raw BCL files.
-    - Your output folder for fastq files will be in the /project/bettslab/students/\<your-name>/\<project-name>/\<sequencing-date>/fastq
+    - Your output folder for fastq files will be here: `/project/bettslab/students/<your-name>/<project-name>/<sequencing-date>/fastq`
 4. After your script has been validated, you will be submitting a job using the LSF job submission. Use the LSF documentation to initiate the following requirements:
     - Use 8 cores
     - Use 64GB of RAM
     - Save the stdout into a file.
     - Save the stderr into a file.
-    - To trigger an email notification, add these flags -N -u \<your-email-address>
+    - To trigger an email notification, add these flags `-N -u <your-email-address>`
 5. Now we will try making fastq files using Illumina's bc2lfastq. This step is needed for libraries that are not directly compatible with cellranger mkfastq. This typically includes the ADT/HTO libraries. More information will be provided in class depending on time.
 
 ## Summary
